@@ -1,5 +1,5 @@
 export interface Page {
-    content: Array<Product>;
+    content: Array<User>;
     totalPages: number;
     totalElements: number;
     last: boolean;
@@ -10,7 +10,7 @@ export interface Page {
     first: boolean;
 };
 
-export interface Product {
+export interface User {
     id: string;
     name: string;
     userName: string;

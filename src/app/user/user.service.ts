@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Page } from '../models/models';
 
 @Injectable()
-export class ProductService {
+export class UserService {
 
   private headers: Headers
   
@@ -14,11 +14,11 @@ export class ProductService {
     this.headers.append('Content-Type', 'application/json');
   }
 
-  getProductList(): Observable<any> {
+  getUserList(): Observable<any> {
     return this.http.get(`http://localhost/api/user/?key=a&page=0&rows=10`).map(res => res.json());
   }
 
-  getProductPage(key, page, size): Observable<Page> {
+  getUserPage(key, page, size): Observable<Page> {
     return this.http.get(`http://localhost/api/user/?key=${key}&page=${page}&rows=${size}`).map(res => res.json());
   }
 

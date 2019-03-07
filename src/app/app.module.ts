@@ -7,8 +7,8 @@ import { registerLocaleData } from '@angular/common';
 
 import 'rxjs/add/operator/map'
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { ProductService } from './product/product.service';
+import { UserComponent } from './user/user.component';
+import { UserService } from './user/user.service';
 import {PaginatorModule} from 'primeng/paginator';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
@@ -20,7 +20,7 @@ registerLocaleData(localePt);
   declarations: [
     AppComponent,
     PaginationComponent,
-    ProductComponent
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,7 @@ registerLocaleData(localePt);
     ButtonModule,
     InputTextModule
   ],
-  providers: [ProductService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [UserService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
